@@ -24,8 +24,8 @@ class TopicoController(private val service: TopicoService) {
         return service.buscarPorId(id)
     }
 
-//    @PostMapping
-//    fun cadastrar(@RequestBody dto: NovoTopicoDto) {
-//        service.cadastrar(dto)
-//    }
+    @PostMapping
+    fun cadastrar(@RequestBody dto: NovoTopicoDto) {
+        service.cadastrar(dto)
+    }
 }

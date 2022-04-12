@@ -6,7 +6,7 @@ import java.util.*
 import java.util.stream.Collectors
 
 @Service
-class CursoService(private var cursos: List<Curso>) {
+class CursoService(var cursos: List<Curso>) {
 
     init {
         val curso = Curso(
