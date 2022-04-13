@@ -2,22 +2,14 @@ package br.com.farolshopping.forum.service
 
 import br.com.farolshopping.forum.controller.dto.NovoTopicoDto
 import br.com.farolshopping.forum.model.Topico
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
 @Service
 class TopicoService(
-        private var topicos: List<Topico>,
-
-        @Autowired
+        private var topicos: List<Topico> = ArrayList(),
         private val cursoService: CursoService,
-        @Autowired
         private val usuarioService: UsuarioService
         ){
-
-    init {
-        this.topicos = ArrayList();
-    }
 
     fun listar(): List<Topico> {
         return topicos
